@@ -60,17 +60,6 @@ const DocumentList: React.FC<DocumentListProps> = ({ selectedFiles, setSelectedF
     }
   };
 
-  const handleSelectDocument = (e: React.ChangeEvent<HTMLInputElement>, path: string) => {
-    const checked = e.target.checked;
-    
-    if (checked) {
-      // Adicionar à seleção
-      setSelectedFiles([...selectedFiles, path]);
-    } else {
-      // Remover da seleção
-      setSelectedFiles(selectedFiles.filter(file => file !== path));
-    }
-  };
 
   useEffect(() => {
     // Atualizar o estado de "selecionar todos" com base na seleção atual
