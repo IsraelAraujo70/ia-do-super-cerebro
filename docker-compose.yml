@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: super-cerebro-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - faiss_data:/app/faiss_index
+      - uploaded_files:/app/uploads
+    env_file:
+      - ./backend/.env
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: super-cerebro-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  faiss_data:
+    driver: local
+  uploaded_files:
+    driver: local

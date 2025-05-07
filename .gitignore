@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.cache/
+*.log
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+
+# dotenv environment variables file
+*.env
+
+# Python egg metadata
+*.egg-info/
+dist/
+build/
+
+# VSCode settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Node.js dependencies
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.DS_Store
+
+# Production build
+frontend/dist/
+
+# Docker
+*.pid
+*.pid.lock
+
+# FAISS vector db
+backend/faiss_index/
+faiss_data/
+
+# Uploads
+backend/uploads/
+uploads/
+
+# Misc
+*.swp
+*.swo
+.idea/
+*.iml
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
