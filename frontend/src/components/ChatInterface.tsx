@@ -68,7 +68,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     const wsHost = process.env.NODE_ENV === 'production' 
       ? 'ia-super-cerebro-api.onrender.com'
       : window.location.host;
-    const wsUrl = `${wsProtocol}//${wsHost}/api/chat`;
+    const wsUrl = `${wsProtocol}//${wsHost}/ws/chat`;
     console.log('Connecting to WebSocket:', wsUrl);
     const ws = new WebSocket(wsUrl);
 
